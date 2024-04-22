@@ -1,5 +1,5 @@
 # VLSI-LAB-EXPERIMENTS
-AIM: To simulate and synthesis fulladder,fullsubractor,halfadder,halfsubractor,logicgates,ripplecarryadder_4,ripplecarryadder_8 using vivado 2023.1
+AIM: To simulate and synthesis fulladder,fullsubractor,halfadder,halfsubractor,logicgates,ripplecarryadder_8 using vivado 2023.1
 
 APPARATUS REQUIRED: vivado 2023.1
 
@@ -88,6 +88,69 @@ OUTPUT:
 ![image](https://github.com/Abitha-2004/VLSI-LAB-EXP-1/assets/161303006/ecba6e70-a3a8-4a4a-aff0-9b9dd9f42a1d)
 FULLADDER:
 ~~~
+module full_adder(sum,count,a,b,c);
+input a,b,c;
+output sum,cout;
+  wire w1,w2,w3,w4,w5;
+  xor x1(w1,a,b);
+  xor x2(sum,w1,c);  
+  and a1(w2,a,b);
+  and a2(w3,b,c);
+  and a3(w4,a,c);
+  
+  or o1(w5,w2,w3);
+  or o2(cout,w5,w4);
+    
+endmodule
+~~~
+OUTPUT:
+![image](https://github.com/Abitha-2004/VLSI-LAB-EXP-1/assets/161303006/825a4214-975f-463d-be68-7a97e9af2d8a)
+![image](https://github.com/Abitha-2004/VLSI-LAB-EXP-1/assets/161303006/9134cd2e-dce8-43d9-b0c2-d681f75c4a08)
+HALFSUBTRACTOR:
+~~~
+module halfsubtractor( D,Bo,A,B);
+input A,B;
+output D,Bo;
+wire w1;
+xor (D,A,B);
+not (w1,B);
+and (Bo,B,w1);
+endmodule
+~~~
+OUTPUT:
+![image](https://github.com/Abitha-2004/VLSI-LAB-EXP-1/assets/161303006/a66cb942-5711-43cf-b8f8-edc21bd7b202)
+![image](https://github.com/Abitha-2004/VLSI-LAB-EXP-1/assets/161303006/92ada442-945d-4e7e-ba30-1f30e3885ca8)
+FULLSUBRACTOR:
+~~~
+module full_sub(borrow,diff,a,b,c);
+output borrow,diff;
+input a,b,c;
+wire w1,w4,w5,w6;
+xor (diff,a,b,c);
+not n1(w1,a);
+and a1(w4,w1,b);
+and a2(w5,w1,c);
+and a3(w6,b,c);
+or o1(borrow,w4,w5,w6);
+endmodule
+~~~
+OUTPUT:
+![image](https://github.com/Abitha-2004/VLSI-LAB-EXP-1/assets/161303006/08a081c2-107f-443c-892e-dc45dcce518f)
+![image](https://github.com/Abitha-2004/VLSI-LAB-EXP-1/assets/161303006/0dad9190-a61f-474a-b5ab-911fc48da045)
+8 Bit Ripple Carry Adder:
+~~~
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
