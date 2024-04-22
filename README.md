@@ -74,6 +74,8 @@ endmodule
 OUTPUT:
 ![image](https://github.com/Abitha-2004/VLSI-LAB-EXP-1/assets/161303006/e5640060-581d-470e-91a6-cbaa2a76ff40)
 ![image](https://github.com/Abitha-2004/VLSI-LAB-EXP-1/assets/161303006/eaf20fdd-7985-446f-a367-7caaf4278afa)
+HALFADDER:
+~~~
 
 
 RESULT:
